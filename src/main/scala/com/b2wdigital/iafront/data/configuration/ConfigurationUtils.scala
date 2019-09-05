@@ -1,26 +1,33 @@
 package com.b2wdigital.iafront.data.configuration
 
+import com.b2wdigital.iafront.exceptions.ConfigurationEnvNotFoundException
 import org.apache.spark.sql.SparkSession
 
 private [data] object ConfigurationUtils {
 
-  def envOrSparkConf(name:String, namespace:Option[String]=None)(implicit sparkSession: SparkSession):Option[String] = {
-    val envName = name.toUpperCase.replace('.', '_')
-
+  def setHadoopConf(namespace:String, envName:String)(implicit sparkSession: SparkSession):String = {
     sys.env.get(envName) match {
-      case None => getSparkConf(namespace, name)
-      case result => result
+      case Some(value) =>
+        sparkSession
+          .sparkContext
+          .hadoopConfiguration
+          .set(namespace, value)
+
+        value
+      case None => throw new ConfigurationEnvNotFoundException(envName)
     }
   }
 
-  def getSparkConf(namespace:Option[String], key:String)(implicit sparkSession: SparkSession):Option[String] = {
-
-    val keyConfig =
-      namespace match {
-        case Some(n) => s"$n.$key"
-        case None => key
-      }
-
-    sparkSession.sparkContext.getConf.getOption(keyConfig)
+  def setSparkConf(namespace:String, envName:String, raises:Boolean=false)(implicit sparkSession: SparkSession):Option[String] = {
+    sys.env.get(envName) match {
+      case Some(value) =>
+        sparkSession
+          .conf
+          .set(namespace, value)
+        Some(value)
+      case None =>
+        if(raises) throw  new ConfigurationEnvNotFoundException(envName)
+        None
+    }
   }
 }
