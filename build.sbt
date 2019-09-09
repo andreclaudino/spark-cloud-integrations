@@ -16,8 +16,9 @@ libraryDependencies ++=Seq(
   "org.apache.spark" %% "spark-sql"                     % sparkVersion % "provided",
   "org.apache.spark" %% "spark-core"                    % sparkVersion % "provided",
 
-  "org.apache.spark" %% "spark-hadoop-cloud" % "2.4.0-palantir.12",
-  "com.google.cloud.bigdataoss" % "gcs-connector" % "hadoop2-2.0.0"
+  "com.amazonaws" % "aws-java-sdk" % "1.7.4",
+  "org.apache.hadoop" % "hadoop-aws" % "2.7.3"
+//  "com.google.cloud.bigdataoss" % "gcs-connector" % "hadoop2-2.0.0"
 )
 
 /// Configurações para execução
@@ -49,3 +50,10 @@ artifact in (Compile, assembly) := {
   val art = (artifact in (Compile, assembly)).value
   art.withClassifier(Some("assembly"))
 }
+
+// Configurações de publicação no S3
+publishConfiguration := publishConfiguration.value.withOverwrite(true)
+publishLocalConfiguration := publishLocalConfiguration.value.withOverwrite(true)
+val mlFreightRepository = "s3://s3-us-east-1.amazonaws.com/ml-freight/applications/"
+publishMavenStyle := false
+publishTo := Some(Resolver.url("S3 ML freight Artifacts", url(mlFreightRepository))(Resolver.ivyStylePatterns))
