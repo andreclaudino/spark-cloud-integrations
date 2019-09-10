@@ -47,7 +47,7 @@ artifact in (Compile, assembly) := {
 }
 addArtifact(artifact in (Compile, assembly), assembly)
 
-val nexusRepository = sys.env.getOrElse("NEXUS_REPOSITORY", "nexus3.b2w.io")
+val nexusRepository = sys.env.getOrElse("NEXUS_REPOSITORY", "")
 val username = sys.env.getOrElse("DEPLOY_USER", "")
 val password = sys.env.getOrElse("DEPLOY_PASSWORD", "")
 
