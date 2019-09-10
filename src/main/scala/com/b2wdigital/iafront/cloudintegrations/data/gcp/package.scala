@@ -1,7 +1,7 @@
 package com.b2wdigital.iafront.cloudintegrations.data
 
 import com.b2wdigital.iafront.cloudintegrations.data.configuration.ConfigurationUtils._
-import org.apache.spark.sql.{DataFrame, DataFrameReader, SparkSession}
+import org.apache.spark.sql.SparkSession
 
 package object gcp {
 

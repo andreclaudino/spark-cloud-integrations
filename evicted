@@ -1,0 +1,104 @@
+[0m[[0m[0minfo[0m] [0m[0mLoading settings for project global-plugins from metals.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mLoading global plugins from /home/claudino/.sbt/1.0/plugins[0m
+[0m[[0m[0minfo[0m] [0m[0mLoading settings for project spark-cloud-integrations-build from plugins.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mLoading project definition from /home/claudino/Projetos/spark-cloud-integrations/project[0m
+[0m[[0m[0minfo[0m] [0m[0mLoading settings for project spark-cloud-integrations from build.sbt ...[0m
+[0m[[0m[0minfo[0m] [0m[0mSet current project to spark-cloud-integrations (in build file:/home/claudino/Projetos/spark-cloud-integrations/)[0m
+[0m[[0m[0minfo[0m] [0m[0mUpdating ...[0m
+[0m[[0m[0minfo[0m] [0m[0mDone updating.[0m
+[0m[[0m[33mwarn[0m] [0m[0mThere may be incompatibilities among your library dependencies; run 'evicted' to see detailed eviction warnings.[0m
+[0m[[0m[33mwarn[0m] [0m[0mFound version conflict(s) in library dependencies; some are suspected to be binary incompatible:[0m
+[0m[[0m[33mwarn[0m] [0m[0m	* com.google.code.findbugs:jsr305:3.0.0 is selected over 1.3.9[0m
+[0m[[0m[33mwarn[0m] [0m[0m	    +- org.apache.hadoop:hadoop-common:2.7.3              (depends on 1.3.9)[0m
+[0m[[0m[33mwarn[0m] [0m[0m	    +- com.google.guava:guava:11.0.2                      (depends on 1.3.9)[0m
+[0m[[0m[33mwarn[0m] [0m[0m	* com.google.guava:guava:11.0.2 is selected over 16.0.1[0m
+[0m[[0m[33mwarn[0m] [0m[0m	    +- org.apache.hadoop:hadoop-common:2.7.3              (depends on 11.0.2)[0m
+[0m[[0m[33mwarn[0m] [0m[0m	    +- org.apache.curator:curator-framework:2.7.1         (depends on 16.0.1)[0m
+[0m[[0m[33mwarn[0m] [0m[0m	    +- org.apache.curator:curator-client:2.7.1            (depends on 16.0.1)[0m
+[0m[[0m[33mwarn[0m] [0m[0m	    +- org.apache.curator:curator-recipes:2.7.1           (depends on 16.0.1)[0m
+[0m[[0m[0minfo[0m] [0m[0mHere are other dependency conflicts that were resolved:[0m
+[0m[[0m[0minfo[0m] [0m[0m	* commons-beanutils:commons-beanutils:1.9.4 is selected over 1.7.0[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- com.b2wdigital.iafront:spark-cloud-integrations_2.11:1.0 (depends on 1.9.4)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- commons-digester:commons-digester:1.8              (depends on 1.7.0)[0m
+[0m[[0m[0minfo[0m] [0m[0m	* commons-logging:commons-logging:1.2 is selected over {1.1.3, 1.1.1, 1.1, 1.0.4}[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- commons-beanutils:commons-beanutils:1.9.4          (depends on 1.2)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.hadoop:hadoop-common:2.7.3              (depends on 1.1.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.httpcomponents:httpclient:4.2           (depends on 1.1.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- net.java.dev.jets3t:jets3t:0.9.0                   (depends on 1.1.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- commons-httpclient:commons-httpclient:3.1          (depends on 1.1.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- commons-configuration:commons-configuration:1.6    (depends on 1.1.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- com.amazonaws:aws-java-sdk:1.7.4                   (depends on 1.1.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.httpcomponents:httpclient:4.2.5         (depends on 1.1.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- commons-beanutils:commons-beanutils-core:1.8.0     (depends on 1.1.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- commons-digester:commons-digester:1.8              (depends on 1.1.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	* com.fasterxml.jackson.core:jackson-databind:2.2.3 is selected over 2.1.1[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.hadoop:hadoop-aws:2.7.3                 (depends on 2.2.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- com.amazonaws:aws-java-sdk:1.7.4                   (depends on 2.1.1)[0m
+[0m[[0m[0minfo[0m] [0m[0m	* com.fasterxml.jackson.core:jackson-core:2.2.3 is selected over 2.1.1[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- com.fasterxml.jackson.core:jackson-databind:2.2.3  (depends on 2.2.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- com.fasterxml.jackson.core:jackson-databind:2.1.1  (depends on 2.1.1)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- com.amazonaws:aws-java-sdk:1.7.4                   (depends on 2.1.1)[0m
+[0m[[0m[0minfo[0m] [0m[0m	* com.fasterxml.jackson.core:jackson-annotations:2.2.3 is selected over 2.1.1[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.hadoop:hadoop-aws:2.7.3                 (depends on 2.2.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- com.fasterxml.jackson.core:jackson-databind:2.2.3  (depends on 2.2.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- com.fasterxml.jackson.core:jackson-databind:2.1.1  (depends on 2.1.1)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- com.amazonaws:aws-java-sdk:1.7.4                   (depends on 2.1.1)[0m
+[0m[[0m[0minfo[0m] [0m[0m	* org.slf4j:slf4j-log4j12:1.7.10 is selected over 1.6.1[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.hadoop:hadoop-common:2.7.3              (depends on 1.7.10)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.hadoop:hadoop-auth:2.7.3                (depends on 1.7.10)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.zookeeper:zookeeper:3.4.6               (depends on 1.6.1)[0m
+[0m[[0m[0minfo[0m] [0m[0m	* org.apache.httpcomponents:httpclient:4.2.5 is selected over {4.2, 4.1.2}[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.hadoop:hadoop-auth:2.7.3                (depends on 4.2.5)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- net.java.dev.jets3t:jets3t:0.9.0                   (depends on 4.2)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- com.amazonaws:aws-java-sdk:1.7.4                   (depends on 4.2)[0m
+[0m[[0m[0minfo[0m] [0m[0m	* org.apache.httpcomponents:httpcore:4.2.4 is selected over {4.2, 4.1.2}[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.httpcomponents:httpclient:4.2.5         (depends on 4.2.4)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.httpcomponents:httpclient:4.2           (depends on 4.2)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- net.java.dev.jets3t:jets3t:0.9.0                   (depends on 4.2)[0m
+[0m[[0m[0minfo[0m] [0m[0m	* org.codehaus.jackson:jackson-mapper-asl:1.9.13 is selected over {1.8.8, 1.8.3}[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.hadoop:hadoop-common:2.7.3              (depends on 1.8.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.codehaus.jackson:jackson-jaxrs:1.8.3           (depends on 1.8.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.codehaus.jackson:jackson-xc:1.8.3              (depends on 1.8.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- com.sun.jersey:jersey-json:1.9                     (depends on 1.8.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.avro:avro:1.7.4                         (depends on 1.8.8)[0m
+[0m[[0m[0minfo[0m] [0m[0m	* org.codehaus.jackson:jackson-core-asl:1.9.13 is selected over {1.8.8, 1.8.3}[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.hadoop:hadoop-common:2.7.3              (depends on 1.8.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.codehaus.jackson:jackson-mapper-asl:1.9.13     (depends on 1.8.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.codehaus.jackson:jackson-jaxrs:1.8.3           (depends on 1.8.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.codehaus.jackson:jackson-xc:1.8.3              (depends on 1.8.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- com.sun.jersey:jersey-json:1.9                     (depends on 1.8.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.avro:avro:1.7.4                         (depends on 1.8.8)[0m
+[0m[[0m[0minfo[0m] [0m[0m	* org.slf4j:slf4j-api:1.7.10 is selected over {1.7.6, 1.6.1, 1.7.5, 1.6.4}[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.hadoop:hadoop-common:2.7.3              (depends on 1.7.10)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.slf4j:slf4j-log4j12:1.7.10                     (depends on 1.7.10)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.hadoop:hadoop-auth:2.7.3                (depends on 1.7.10)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.avro:avro:1.7.4                         (depends on 1.6.4)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.directory.server:apacheds-i18n:2.0.0-M15 (depends on 1.7.5)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.directory.server:apacheds-kerberos-codec:2.0.0-M15 (depends on 1.7.5)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.directory.api:api-util:1.0.0-M20        (depends on 1.7.5)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.directory.api:api-asn1-api:1.0.0-M20    (depends on 1.7.5)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.slf4j:slf4j-log4j12:1.6.1                      (depends on 1.6.1)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.zookeeper:zookeeper:3.4.6               (depends on 1.6.1)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.curator:curator-client:2.7.1            (depends on 1.7.6)[0m
+[0m[[0m[0minfo[0m] [0m[0m	* commons-lang:commons-lang:2.6 is selected over 2.4[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.hadoop:hadoop-common:2.7.3              (depends on 2.6)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- commons-configuration:commons-configuration:1.6    (depends on 2.4)[0m
+[0m[[0m[0minfo[0m] [0m[0m	* log4j:log4j:1.2.17 is selected over 1.2.16[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.hadoop:hadoop-common:2.7.3              (depends on 1.2.17)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.slf4j:slf4j-log4j12:1.7.10                     (depends on 1.2.17)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.hadoop:hadoop-auth:2.7.3                (depends on 1.2.17)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.slf4j:slf4j-log4j12:1.6.1                      (depends on 1.2.16)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.zookeeper:zookeeper:3.4.6               (depends on 1.2.16)[0m
+[0m[[0m[0minfo[0m] [0m[0m	* commons-collections:commons-collections:3.2.2 is selected over 3.2.1[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.hadoop:hadoop-common:2.7.3              (depends on 3.2.2)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- commons-beanutils:commons-beanutils:1.9.4          (depends on 3.2.2)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- commons-configuration:commons-configuration:1.6    (depends on 3.2.1)[0m
+[0m[[0m[0minfo[0m] [0m[0m	* commons-codec:commons-codec:1.4 is selected over {1.3, 1.2, 1.6}[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.hadoop:hadoop-common:2.7.3              (depends on 1.4)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- net.java.dev.jets3t:jets3t:0.9.0                   (depends on 1.4)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.hadoop:hadoop-auth:2.7.3                (depends on 1.4)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.httpcomponents:httpclient:4.2.5         (depends on 1.6)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- commons-httpclient:commons-httpclient:3.1          (depends on 1.2)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- org.apache.httpcomponents:httpclient:4.2           (depends on 1.3)[0m
+[0m[[0m[0minfo[0m] [0m[0m	    +- com.amazonaws:aws-java-sdk:1.7.4                   (depends on 1.3)[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 15 s, completed 10/09/2019 15:02:43[0m
