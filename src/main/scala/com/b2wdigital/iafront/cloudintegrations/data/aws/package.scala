@@ -1,6 +1,6 @@
-package com.b2wdigital.iafront.data
+package com.b2wdigital.iafront.cloudintegrations.data
 
-import com.b2wdigital.iafront.data.configuration.ConfigurationUtils.{setSparkConf, setHadoopConf}
+import com.b2wdigital.iafront.cloudintegrations.data.configuration.ConfigurationUtils.{setSparkConf, setHadoopConf}
 import org.apache.spark.sql.SparkSession
 
 package object aws {

@@ -1,6 +1,6 @@
-package com.b2wdigital.iafront.data.configuration
+package com.b2wdigital.iafront.cloudintegrations.data.configuration
 
-import com.b2wdigital.iafront.exceptions.ConfigurationEnvNotFoundException
+import com.b2wdigital.iafront.cloudintegrations.exceptions.ConfigurationEnvNotFoundException
 import org.apache.spark.sql.SparkSession
 
 private [data] object ConfigurationUtils {
