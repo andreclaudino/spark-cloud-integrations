@@ -5,28 +5,30 @@ import org.apache.spark.sql.SparkSession
 
 private [data] object ConfigurationUtils {
 
-  def setHadoopConf(namespace:String, envName:String)(implicit sparkSession: SparkSession):String = {
+  def setHadoopConf(key:String, envName:String, raises:Boolean=false)(implicit sparkSession: SparkSession):Option[String] = {
     sys.env.get(envName) match {
       case Some(value) =>
         sparkSession
           .sparkContext
           .hadoopConfiguration
-          .set(namespace, value)
+          .set(key, value)
 
-        value
-      case None => throw new ConfigurationEnvNotFoundException(envName)
+        Some(value)
+      case None =>
+        if(raises) throw new ConfigurationEnvNotFoundException(envName)
+        None
     }
   }
 
-  def setSparkConf(namespace:String, envName:String, raises:Boolean=false)(implicit sparkSession: SparkSession):Option[String] = {
+  def setSparkConf(key:String, envName:String, raises:Boolean=false)(implicit sparkSession: SparkSession):Option[String] = {
     sys.env.get(envName) match {
       case Some(value) =>
         sparkSession
           .conf
-          .set(namespace, value)
+          .set(key, value)
         Some(value)
       case None =>
-        if(raises) throw  new ConfigurationEnvNotFoundException(envName)
+        if(raises) throw new ConfigurationEnvNotFoundException(envName)
         None
     }
   }
