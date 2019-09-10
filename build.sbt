@@ -4,21 +4,25 @@ scalaVersion := "2.11.12"
 
 version := "0.1-SNAPSHOT"
 
-val sparkVersion = "2.4.3"
+val sparkVersion = "2.4.4"
 
 resolvers ++= Seq(
-  "Artima Maven Repository" at "http://repo.artima.com/releases",
-  "Palantir" at "https://dl.bintray.com/palantir/releases",
   Resolver.sonatypeRepo("releases")
 )
 
 libraryDependencies ++=Seq(
-  "org.apache.spark" %% "spark-sql"                     % sparkVersion % "provided",
-  "org.apache.spark" %% "spark-core"                    % sparkVersion % "provided",
+  "org.apache.spark" %% "spark-sql" % sparkVersion % "provided" exclude("commons-beanutils", "commons-beanutils"),
+  "org.apache.spark" %% "spark-core" % sparkVersion % "provided" exclude("commons-beanutils", "commons-beanutils"),
+
+  "com.google.cloud.bigdataoss" % "gcs-connector" % "hadoop2-2.0.0" % "provided"
+    exclude("javax.jms", "jms")
+    exclude("com.sun.jdmk", "jmxtools")
+    exclude("com.sun.jmx", "jmxri")
+    exclude("org.apache.hadoop", "hadopp-common"),
 
   "com.amazonaws" % "aws-java-sdk" % "1.7.4",
-  "org.apache.hadoop" % "hadoop-aws" % "2.7.3"
-//  "com.google.cloud.bigdataoss" % "gcs-connector" % "hadoop2-2.0.0"
+  "org.apache.hadoop" % "hadoop-aws" % "2.7.3",
+  "commons-beanutils" % "commons-beanutils" % "1.9.4"
 )
 
 /// Configurações para execução
@@ -40,7 +44,7 @@ publishMavenStyle := true
 
 /// Gestão de conflitos
 assemblyMergeStrategy in assembly := {
-  case PathList("org", "apache", xs @ _*) => MergeStrategy.last
+  case PathList("org", "apache", "commons", xs @ _*) => MergeStrategy.last
   case x =>
     val oldStrategy = (assemblyMergeStrategy in assembly).value
     oldStrategy(x)
